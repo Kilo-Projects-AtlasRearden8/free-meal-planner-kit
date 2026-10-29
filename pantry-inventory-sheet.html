@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pantry Inventory Sheet &bull; Freebies &bull; Asdale Dynamics, LLC</title>
+<style>
+  * { box-sizing: border-box; }
+  html { font-size: 18px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background: #fff;
+    line-height: 1.5;
+  }
+  .no-print {
+    padding: 16px 20px;
+    border-bottom: 2px solid #6b2137;
+    background: #fafafa;
+  }
+  .no-print h1 { margin: 0 0 6px; font-size: 1.75rem; color: #6b2137; }
+  .no-print p { margin: 0; font-size: 1rem; color: #374151; }
+  .no-print .btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 14px;
+    background: #6b2137;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .sheet {
+    max-width: 7.5in;
+    margin: 18px auto;
+    padding: 0 6px;
+  }
+  .sheet header {
+    text-align: center;
+    border-bottom: 3px double #111;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .sheet header h2 { margin: 0 0 4px; font-size: 1.9rem; color: #6b2137; }
+  .sheet header .subtitle { font-size: 1.1rem; color: #374151; }
+  .sheet header .meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  .sheet header input {
+    font-size: 1.1rem;
+    padding: 4px 6px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    width: 150px;
+  }
+  table.inventory {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  table.inventory th, table.inventory td {
+    border: 2px solid #111;
+    padding: 10px 8px;
+    vertical-align: top;
+    text-align: center;
+    height: 44px;
+  }
+  table.inventory th {
+    background: #6b2137;
+    color: #fff;
+    font-size: 1rem;
+    height: 52px;
+  }
+  table.inventory td.item-col { text-align: left; width: 26%; font-weight: 600; color: #4c1d31; }
+  table.inventory input {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 6px 8px;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+  }
+  table.inventory input:focus { border-color: #6b2137; box-shadow: 0 0 0 3px rgba(107, 33, 55, 0.2); }
+  table.inventory input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6b2137;
+    width: auto;
+  }
+  .summary {
+    margin-top: 16px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .summary td {
+    border: 2px solid #111;
+    padding: 12px 8px;
+    height: 55px;
+    text-align: center;
+  }
+  .summary td.label {
+    font-weight: 700;
+    width: 33%;
+    background: #f3e8ec;
+    color: #4c1d31;
+    text-align: left;
+  }
+  .hints {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  .hints strong { color: #6b2137; }
+  @media print {
+    .no-print { display: none !important; }
+    .sheet { margin: 0; padding: 0; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { size: Letter; margin: 0.5in 0.55in; }
+    table.inventory tr { page-break-inside: avoid; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="no-print" role="banner">
+  <h1>Pantry Inventory Sheet</h1>
+  <p>Track what&rsquo;s on hand, how much, and when it expires so nothing gets wasted or forgotten. US Letter, large print.</p>
+  <a class="btn" href="javascript:window.print()">Print this sheet</a>
+</div>
+
+<div class="sheet">
+  <header>
+    <h2>Pantry Inventory</h2>
+    <p class="subtitle">Know what you have before you shop</p>
+    <div class="meta">
+      <span>Date taken: <input type="text" placeholder=""></span>
+      <span>Taken by: <input type="text" placeholder="Your name"></span>
+    </div>
+  </header>
+
+  <table class="inventory">
+    <thead>
+      <tr>
+        <th style="width:26%">Item</th>
+        <th style="width:16%">Location / Shelf</th>
+        <th style="width:13%">Quantity</th>
+        <th style="width:13%">Unit</th>
+        <th style="width:14%">Expiration Date</th>
+        <th style="width:13%">Date Added</th>
+        <th style="width:5%">Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+      <tr>
+        <td class="item-col"><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" placeholder="oz, lb, ea"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="checkbox"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="summary">
+    <tbody>
+      <tr>
+        <td class="label">Items needing use soon</td>
+        <td><input type="text"></td>
+        <td class="label">Total pantry items</td>
+        <td><input type="text"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="hints"><strong>Tip:</strong> Put newest items in the back and older ones up front (first in, first out). Check this sheet before every grocery trip so you don&rsquo;t buy duplicates.</p>
+</div>
+
+</body>
+</html>

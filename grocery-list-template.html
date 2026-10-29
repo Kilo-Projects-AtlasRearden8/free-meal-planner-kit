@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grocery List Template &bull; Freebies &bull; Asdale Dynamics, LLC</title>
+<style>
+  * { box-sizing: border-box; }
+  html { font-size: 18px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background: #fff;
+    line-height: 1.5;
+  }
+  .no-print {
+    padding: 16px 20px;
+    border-bottom: 2px solid #6b2137;
+    background: #fafafa;
+  }
+  .no-print h1 { margin: 0 0 6px; font-size: 1.75rem; color: #6b2137; }
+  .no-print p { margin: 0; font-size: 1rem; color: #374151; }
+  .no-print .btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 14px;
+    background: #6b2137;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .sheet {
+    max-width: 7.5in;
+    margin: 18px auto;
+    padding: 0 6px;
+  }
+  .sheet header {
+    text-align: center;
+    border-bottom: 3px double #111;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .sheet header h2 { margin: 0 0 4px; font-size: 1.9rem; color: #6b2137; }
+  .sheet header .subtitle { font-size: 1.1rem; color: #374151; }
+  .sheet header .meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  .sheet header input {
+    font-size: 1.1rem;
+    padding: 4px 6px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    width: 150px;
+  }
+  .section {
+    border: 2px solid #111;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section .section-header {
+    background: #6b2137;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 6px 6px 0 0;
+    text-align: left;
+    border-bottom: 2px solid #111;
+  }
+  .section ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px 16px;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+  }
+  .row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: #6b2137;
+  }
+  .row input[type="text"] {
+    flex: 1;
+    font-size: 1.05rem;
+    padding: 6px 8px;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .row input.qty {
+    flex: 0 0 95px;
+    font-size: 1.05rem;
+    padding: 6px 8px;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .totals {
+    margin-top: 16px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .totals td {
+    border: 2px solid #111;
+    padding: 12px 8px;
+    height: 55px;
+    text-align: center;
+  }
+  .totals td.label {
+    font-weight: 700;
+    width: 30%;
+    background: #f3e8ec;
+    color: #4c1d31;
+    text-align: left;
+  }
+  .hints {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  .hints strong { color: #6b2137; }
+  @media print {
+    .no-print { display: none !important; }
+    .sheet { margin: 0; padding: 0; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { size: Letter; margin: 0.5in 0.55in; }
+    .section { page-break-inside: avoid; break-inside: avoid; }
+    .row { page-break-inside: avoid; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="no-print" role="banner">
+  <h1>Grocery List Template</h1>
+  <p>Grouped by store section so one trip covers the week. Fill in, check off, print. US Letter, large print.</p>
+  <a class="btn" href="javascript:window.print()">Print this list</a>
+</div>
+
+<div class="sheet">
+  <header>
+    <h2>Grocery List</h2>
+    <p class="subtitle">Check it off as you shop</p>
+    <div class="meta">
+      <span>Store: <input type="text" placeholder="e.g. Aldi, Walmart"></span>
+      <span>Date: <input type="text" placeholder=""></span>
+    </div>
+  </header>
+
+  <div class="section">
+    <div class="section-header">Produce</div>
+    <ul>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Dairy &amp; Eggs</div>
+    <ul>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Meat &amp; Seafood</div>
+    <ul>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Pantry &amp; Dry Goods</div>
+    <ul>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Frozen</div>
+    <ul>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Bakery &amp; Bread</div>
+    <ul>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">Household &amp; Other</div>
+    <ul>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+      <li><div class="row"><input type="checkbox"><input type="text" placeholder="Item"><input type="text" class="qty" placeholder="Qty"></div></li>
+    </ul>
+  </div>
+
+  <table class="totals">
+    <tbody>
+      <tr>
+        <td class="label">Estimated total</td>
+        <td>$ <input type="text" placeholder="0.00"></td>
+        <td class="label">Actual total</td>
+        <td>$ <input type="text" placeholder="0.00"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="hints"><strong>Tip:</strong> Shop the pantry first &mdash; cross off anything you already have before you leave the house. Store brands and frozen produce usually cost the least.</p>
+</div>
+
+</body>
+</html>

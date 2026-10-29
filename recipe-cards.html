@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget-Friendly Recipe Cards &bull; Freebies &bull; Asdale Dynamics, LLC</title>
+<style>
+  * { box-sizing: border-box; }
+  html { font-size: 18px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background: #fff;
+    line-height: 1.5;
+  }
+  .no-print {
+    padding: 16px 20px;
+    border-bottom: 2px solid #6b2137;
+    background: #fafafa;
+  }
+  .no-print h1 { margin: 0 0 6px; font-size: 1.75rem; color: #6b2137; }
+  .no-print p { margin: 0; font-size: 1rem; color: #374151; }
+  .no-print .btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 14px;
+    background: #6b2137;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .sheet {
+    max-width: 7.6in;
+    margin: 18px auto;
+    padding: 0 6px;
+  }
+  .sheet header {
+    text-align: center;
+    border-bottom: 3px double #111;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .sheet header h2 { margin: 0 0 4px; font-size: 1.9rem; color: #6b2137; }
+  .sheet header .subtitle { font-size: 1.1rem; color: #374151; }
+  .new-card { break-before: page; page-break-before: always; }
+  .card {
+    border: 2px solid #111;
+    border-radius: 10px;
+    padding: 16px 18px 18px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    background: #fff;
+  }
+  .card h3 {
+    margin: 0 0 4px;
+    font-size: 1.6rem;
+    color: #6b2137;
+    border-bottom: 2px solid #6b2137;
+    padding-bottom: 6px;
+  }
+  .card h3 input { font: inherit; border: none; background: transparent; color: inherit; width: 100%; text-align: center; font-weight: 700; }
+  .meta {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0 14px;
+    font-size: 1.05rem;
+    color: #374151;
+  }
+  .meta .field { flex: 1; }
+  .meta label { display: block; font-size: 0.9rem; font-weight: 700; color: #4c1d31; margin-bottom: 4px; }
+  .meta input {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 6px 8px;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .meta input:focus { border-color: #6b2137; box-shadow: 0 0 0 3px rgba(107, 33, 55, 0.2); }
+  h4 {
+    margin: 14px 0 6px;
+    font-size: 1.15rem;
+    color: #6b2137;
+    border-bottom: 1px solid #6b2137;
+    padding-bottom: 4px;
+  }
+  ol.steps, ul.ingredients {
+    margin: 0 0 10px;
+    padding-left: 20px;
+  }
+  ol.steps li, ul.ingredients li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+  }
+  ol.steps li input, ul.ingredients li input {
+    width: 100%;
+    font: inherit;
+    padding: 6px 8px;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    background: #fff;
+  }
+  ol.steps li input:focus, ul.ingredients li input:focus { border-color: #6b2137; box-shadow: 0 0 0 3px rgba(107, 33, 55, 0.2); }
+  .notes {
+    border: 2px solid #111;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-top: 12px;
+  }
+  .notes h4 { margin-top: 0; border: none; padding: 0; margin-bottom: 6px; }
+  .notes input {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 6px 8px;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 6px;
+  }
+  .notes input:last-child { margin-bottom: 0; }
+  .brand {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #6b2137;
+    font-weight: 700;
+    text-align: right;
+  }
+  .hints {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  .hints strong { color: #6b2137; }
+  @media print {
+    .no-print { display: none !important; }
+    .sheet { margin: 0; padding: 0; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { size: Letter; margin: 0.45in 0.55in; }
+    .card { page-break-inside: avoid; break-inside: avoid; }
+    .new-card { break-before: page; page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<div class="no-print" role="banner">
+  <h1>Budget-Friendly Recipe Cards</h1>
+  <p>Write down your go-to cheap meals with cost-per-serving space. Build your own budget cookbook, one card at a time. US Letter, large print.</p>
+  <a class="btn" href="javascript:window.print()">Print recipe cards</a>
+</div>
+
+<div class="sheet">
+  <header>
+    <h2>Budget Recipe Cards</h2>
+    <p class="subtitle">Fill in, cut out, keep in a box or binder</p>
+  </header>
+
+  <article class="card">
+    <h3><input type="text" placeholder="Recipe name"></h3>
+    <div class="meta">
+      <div class="field"><label>Servings</label><input type="text" placeholder=""></div>
+      <div class="field"><label>Cost per serving</label><input type="text" placeholder="$0.00"></div>
+      <div class="field"><label>Prep time</label><input type="text" placeholder=""></div>
+      <div class="field"><label>Cook time</label><input type="text" placeholder=""></div>
+    </div>
+    <h4>Ingredients</h4>
+    <ul class="ingredients">
+      <li><input type="text" placeholder="1. "></li>
+      <li><input type="text" placeholder="2. "></li>
+      <li><input type="text" placeholder="3. "></li>
+      <li><input type="text" placeholder="4. "></li>
+      <li><input type="text" placeholder="5. "></li>
+      <li><input type="text" placeholder="6. "></li>
+      <li><input type="text" placeholder="7. "></li>
+      <li><input type="text" placeholder="8. "></li>
+    </ul>
+    <h4>Steps</h4>
+    <ol class="steps">
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+    </ol>
+    <div class="notes">
+      <h4>Notes &amp; substitutions</h4>
+      <input type="text" placeholder="">
+      <input type="text" placeholder="">
+      <input type="text" placeholder="">
+    </div>
+    <div class="brand">&copy; 2026 Asdale Dynamics, LLC</div>
+  </article>
+
+  <article class="card new-card">
+    <h3><input type="text" placeholder="Recipe name"></h3>
+    <div class="meta">
+      <div class="field"><label>Servings</label><input type="text" placeholder=""></div>
+      <div class="field"><label>Cost per serving</label><input type="text" placeholder="$0.00"></div>
+      <div class="field"><label>Prep time</label><input type="text" placeholder=""></div>
+      <div class="field"><label>Cook time</label><input type="text" placeholder=""></div>
+    </div>
+    <h4>Ingredients</h4>
+    <ul class="ingredients">
+      <li><input type="text" placeholder="1. "></li>
+      <li><input type="text" placeholder="2. "></li>
+      <li><input type="text" placeholder="3. "></li>
+      <li><input type="text" placeholder="4. "></li>
+      <li><input type="text" placeholder="5. "></li>
+      <li><input type="text" placeholder="6. "></li>
+      <li><input type="text" placeholder="7. "></li>
+      <li><input type="text" placeholder="8. "></li>
+    </ul>
+    <h4>Steps</h4>
+    <ol class="steps">
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+      <li><input type="text" placeholder=""></li>
+    </ol>
+    <div class="notes">
+      <h4>Notes &amp; substitutions</h4>
+      <input type="text" placeholder="">
+      <input type="text" placeholder="">
+      <input type="text" placeholder="">
+    </div>
+    <div class="brand">&copy; 2026 Asdale Dynamics, LLC</div>
+  </article>
+</div>
+
+<p class="hints no-print" style="text-align:center;"><strong>Tip:</strong> Base meals on low-cost staples &mdash; rice, beans, lentils, eggs, oats, frozen vegetables &mdash; and cook once, eat twice.</p>
+
+</body>
+</html>
