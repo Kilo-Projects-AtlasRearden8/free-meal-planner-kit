@@ -2,23 +2,35 @@
 
 Fillable, printable, large-print friendly meal-planning freebies from **Asdale Dynamics, LLC**. No account, no signup, no tracking &mdash; just open a sheet in your browser, type in your plan, and print.
 
+## Who this is for
+
+Anyone who wants to plan meals without fuss: busy households, nurses on shifting schedules, folks on a tight budget, or anyone who prefers paper over apps. These sheets are designed to be low-energy and ADHD-friendly &mdash; open, fill in, print, done. No logins, no subscriptions, no data leaves your computer.
+
 ## What's included
 
 | Sheet | File | What it does |
 |-------|------|--------------|
-| Weekly Menu Planner | `weekly-menu-planner.html` | Plan breakfast, lunch, dinner, and snacks for every day of the week, plus a weekly grocery budget line. |
-| Grocery List Template | `grocery-list-template.html` | Grouped by store section (produce, dairy, meat, pantry, frozen, bakery, household) with checkboxes and quantity fields. |
-| Pantry Inventory Sheet | `pantry-inventory-sheet.html` | Track what you have on hand, quantities, units, expiration dates, and date added &mdash; so nothing gets wasted or forgotten. |
-| Budget-Friendly Recipe Cards | `recipe-cards.html` | Write down go-to meals with servings, cost per serving, prep/cook time, ingredients, steps, and notes. One card per printed page. |
+| Weekly Menu Planner | `weekly-menu-planner.html` | Plan breakfast, lunch, dinner, and snacks for every day of the week, plus a notes column and a weekly grocery budget line. |
+| Grocery List Template | `grocery-list-template.html` | Grouped by store section (produce, dairy, meat, pantry, frozen, bakery, household) with checkboxes and quantity fields so one trip covers the week. |
+| Pantry Inventory Sheet | `pantry-inventory-sheet.html` | Track what you have on hand, quantities, units, expiration dates, and date added &mdash; so nothing gets wasted or forgotten before you shop. |
+| Budget-Friendly Recipe Cards | `recipe-cards.html` | Write down go-to cheap meals with servings, cost per serving, prep/cook time, ingredients, steps, and notes. One card per printed page; build your own budget cookbook. |
 
 ## How to use
 
 1. Open any `.html` file in your web browser (Chrome, Edge, Firefox, Safari).
 2. Click into the fields and type your plan directly on screen.
 3. Press <kbd>Ctrl+P</kbd> (Windows/Linux) or <kbd>Cmd+P</kbd> (Mac) to print.
-4. Each sheet is sized for US Letter paper with large, high-contrast text for easy reading. Print controls and the header banner hide automatically when printed.
+4. Each sheet is sized for US Letter paper with large, high-contrast text. Print controls and the header banner hide automatically when printed.
 
 No internet connection, account, or personal data is required. Everything stays on your computer.
+
+## Run the verification
+
+This kit includes a small validation script that checks every HTML file for clean structure and confirms the required credit and license strings are present:
+
+```bash
+./verify.sh
+```
 
 ## Accessibility
 
